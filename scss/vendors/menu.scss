@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2? family= Roboto:wght@100 & family= Shrikhand & display=swap");
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../layout/headermenu";
+@import "../layout/mainmenu";
+@import "../layout/footer";
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  p {
+    font-family: $roboto;
+  }
+}
