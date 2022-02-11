@@ -1,23 +1,23 @@
 footer {
   width: 100%;
-  height: 25vh;
 }
 .footer {
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 250px;
   background: rgb(41, 40, 40);
   @include column;
 
   h2 {
-    font-family: $shrinkhand;
+    font-family: $shrikhand;
     font-weight: bold;
     font-style: italic;
     color: white;
+    letter-spacing: 1px;
     text-align: center;
   }
 
   ul {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -25,8 +25,11 @@ footer {
 
     li {
       list-style: none;
-      color: white;
       font-family: $roboto;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }

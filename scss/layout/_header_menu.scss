@@ -13,15 +13,26 @@ body {
 .header {
   width: 100%;
   height: 60px;
+  display: flex;
+  gap: 40%;
+  align-items: center;
   box-shadow: 1px 3px 5px 0px rgba(181, 179, 179, 0.75);
   padding: 20px;
 
+  .header--retour {
+    color: black;
+  }
+
+  i {
+    font-size: 25px;
+  }
   h1 {
     text-align: center;
 
     font-weight: bold;
     font-style: italic;
     a {
+      text-decoration: none;
       font-family: $shrikhand;
       color: black;
       font-weight: 400;
