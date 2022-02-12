@@ -56,91 +56,109 @@
       }
     }
 
-    .categorie {
-      width: 90%;
-      margin: 2px auto;
+    .categorie--details_plats {
+      //a suprimer html css
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 
-      .categorie--titre {
-        width: 40px;
-        font-size: 19px;
-        text-transform: uppercase;
-        border-bottom: 3px solid green;
-      }
-      .categorie--plats {
-        display: flex;
-        gap: 60px;
-        overflow: hidden;
-        height: 70px;
-        background: #ffff;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  .button {
+    margin: 5% 45% 5% 45%;
+    a {
+      width: 30%;
 
-        &:nth-child(1) {
-          animation: anim 0.2s ease;
-          @include anim_one;
-        }
-        &:nth-child(2) {
-          animation: anim 0.7s ease;
-          @include anim_one;
-        }
-        &:nth-child(3) {
-          animation: anim 0.7s ease;
-          @include anim_one;
-        }
-      }
-      .categorie--texte_plats {
-        display: flex;
-        width: 60%;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0px 14px 5px;
-      }
+      text-decoration: none;
+      @include button;
+      padding: 15px 45px 15px 45px;
+      border-radius: 25px;
+    }
+  }
 
-      .categorie--nom_plats {
-        font-family: $roboto;
-        font-size: 17px;
-        font-weight: bold;
-      }
-      .categorie--prix_plats {
-        width: 30%;
-        font-size: 17px;
-        font-weight: bold;
-        display: flex;
-        p {
-          padding-top: 20%;
-        }
+  @media screen and (max-width: 376px) {
+    .menu {
+      .categorie {
+        width: 90%;
+        margin: 2px auto;
+        @include anim_one;
 
-        .categorie--valide {
-          width: 100%;
-          background-color: $tertiaire;
+        .categorie--titre {
+          width: 40px;
+          font-size: 19px;
+          text-transform: uppercase;
+          border-bottom: 3px solid green;
+        }
+        .categorie--plats {
           display: flex;
-          justify-content: center;
-          align-items: center;
+          gap: 60px;
+          overflow: hidden;
+          height: 70px;
+          background: #ffff;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          cursor: pointer;
+        }
+        .categorie--texte_plats {
+          display: flex;
+          width: 95%;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px 0px 14px 5px;
+        }
 
-          i {
-            font-size: 20px;
-            color: #ffff;
+        .categorie--nom_plats {
+          font-family: $roboto;
+          font-size: 17px;
+          font-weight: bold;
+        }
+        .categorie--prix_plats {
+          width: 12%;
+          font-size: 17px;
+          font-weight: bold;
+          display: flex;
+
+          p {
+            padding-top: 20%;
+          }
+
+          .categorie--valide {
+            width: 100%;
+            background-color: $tertiaire;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(80px);
+
+            i {
+              font-size: 20px;
+              color: #ffff;
+            }
           }
         }
-      }
 
-      .categorie--details_plats {
-        //a suprimer html css
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-    .button {
-      margin: 5% 45% 5% 45%;
-      a {
-        width: 30%;
+        &:hover {
+          .categorie--prix_plats {
+            transition: 3s;
+            width: 23%;
+          }
+          .categorie--texte_plats {
+            transition: 3s;
+            width: 60%;
 
-        text-decoration: none;
-        @include button;
-        padding: 15px 45px 15px 45px;
-        border-radius: 25px;
+            p,
+            span {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .categorie--valide {
+            transition: 3s;
+            transform: translateX(0px);
+          }
+        }
       }
     }
   }

@@ -1,0 +1,30 @@
+@mixin anim_one {
+  @for $i from 1 through 4 {
+    .categorie--plats:nth-child(#{$i}) {
+      animation: anim $i * 0.2s ease-in;
+    }
+
+    @keyframes anim {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      25% {
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.4;
+      }
+      75% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+
+@mixin anim_hover {
+}
