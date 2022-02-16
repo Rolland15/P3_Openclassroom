@@ -1,6 +1,58 @@
 @import "../abstracts/mixins";
+@import "../abstracts/animation";
 @media screen and (max-width: 376px) {
   /*Acceuil*/
+
+  .load_spinner {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include load;
+
+    .load_spinner--element {
+      width: 18%;
+      height: 10%;
+      border-radius: 50%;
+      border: 5px solid white;
+      position: relative;
+      opacity: 1.5;
+      z-index: 2000;
+
+      .load_spinner--element--ball-green {
+        width: 28%;
+        height: 28%;
+        border-radius: 50%;
+        background: #05cc9a;
+        position: absolute;
+        top: 4px;
+        left: -2px;
+      }
+      .load_spinner--element--ball-purple {
+        width: 28%;
+        height: 28%;
+        border-radius: 50%;
+        background: rgb(104, 1, 104);
+        position: absolute;
+        top: 5px;
+        right: -4px;
+      }
+      .load_spinner--element--ball-pink {
+        width: 28%;
+        height: 28%;
+        border-radius: 50%;
+        background: rgb(253, 114, 137);
+        position: absolute;
+        top: 87%;
+        left: 36%;
+      }
+    }
+  }
 
   .header {
     width: 89%;
