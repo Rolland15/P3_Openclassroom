@@ -90,7 +90,7 @@
         }
         .categorie--plats {
           display: flex;
-          gap: 60px;
+          justify-content: space-between;
           overflow: hidden;
           height: 70px;
           background: #ffff;
@@ -102,7 +102,7 @@
         }
         .categorie--texte_plats {
           display: flex;
-          width: 95%;
+          width: 100%;
           flex-direction: column;
           gap: 10px;
           padding: 10px 0px 14px 5px;
@@ -114,13 +114,16 @@
           font-weight: bold;
         }
         .categorie--prix_plats {
-          width: 12%;
           font-size: 17px;
           font-weight: bold;
           display: flex;
+          gap: 10px;
 
           p {
-            padding-top: 20%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
           }
 
           .categorie--valide {
@@ -139,25 +142,8 @@
         }
 
         &:hover {
-          .categorie--prix_plats {
-            transition: 3s;
-            width: 23%;
-          }
-          .categorie--texte_plats {
-            transition: 3s;
-            width: 60%;
-
-            p,
-            span {
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-          }
-          .categorie--valide {
-            transition: 3s;
-            transform: translateX(0px);
-          }
+          @include anim_hover;
+          @include anim_icon;
         }
       }
     }

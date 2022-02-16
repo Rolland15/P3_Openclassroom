@@ -27,4 +27,32 @@
 }
 
 @mixin anim_hover {
+  .categorie--prix_plats {
+    transition: 0.9s;
+    width: 23%;
+  }
+  .categorie--texte_plats {
+    transition: 0.7s;
+
+    width: 60%;
+
+    p,
+    span {
+      transition: 0.5s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .categorie--valide {
+    transition: 0.9s;
+    transform: translateX(0px);
+  }
+}
+
+@mixin anim_icon {
+  i {
+    transition: 0.9s;
+    transform: rotate(-1440deg);
+  }
 }

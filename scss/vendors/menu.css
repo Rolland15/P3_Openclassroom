@@ -288,7 +288,9 @@ body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 60px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     overflow: hidden;
     height: 70px;
     background: #ffff;
@@ -302,7 +304,7 @@ body p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 95%;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -316,15 +318,25 @@ body p {
     font-weight: bold;
   }
   .container .menu .categorie .categorie--prix_plats {
-    width: 12%;
     font-size: 17px;
     font-weight: bold;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 10px;
   }
   .container .menu .categorie .categorie--prix_plats p {
-    padding-top: 20%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .container .menu .categorie .categorie--prix_plats .categorie--valide {
     width: 100%;
@@ -346,26 +358,34 @@ body p {
     color: #ffff;
   }
   .container .menu .categorie:hover .categorie--prix_plats {
-    -webkit-transition: 3s;
-    transition: 3s;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
     width: 23%;
   }
   .container .menu .categorie:hover .categorie--texte_plats {
-    -webkit-transition: 3s;
-    transition: 3s;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
     width: 60%;
   }
   .container .menu .categorie:hover .categorie--texte_plats p,
   .container .menu .categorie:hover .categorie--texte_plats span {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .container .menu .categorie:hover .categorie--valide {
-    -webkit-transition: 3s;
-    transition: 3s;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+  }
+  .container .menu .categorie:hover i {
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+    -webkit-transform: rotate(-1440deg);
+            transform: rotate(-1440deg);
   }
 }
 
