@@ -10,23 +10,24 @@
   }
 
   .menu {
-    width: 80%;
+    width: 60%;
     border-radius: 30px 30px 0px 0px;
     position: absolute;
     padding: 50px;
     top: 70%;
-    left: 8%;
+    left: 17%;
     background-color: rgba(246, 246, 246, 255);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     .menu--titre {
       width: 75%;
-      margin-left: 25%;
+      margin-left: 12%;
+      margin-bottom: 70px;
       display: flex;
-      justify-content: space-around;
-      padding: 10px;
+      justify-content: space-between;
+
       align-items: center;
       h1 {
-        font-size: 35px;
+        font-size: 40px;
         font-family: $shrikhand;
       }
       .menu--icon-card {
@@ -75,54 +76,148 @@
     }
   }
 
-  @media screen and (max-width: 376px) {
-    .menu {
-      .categorie {
-        width: 90%;
-        margin: 2px auto;
-        @include anim_one;
+  .categorie {
+    width: 70%;
+    margin: 2px auto;
+    @include anim_one;
 
-        .categorie--titre {
-          width: 40px;
-          font-size: 19px;
-          text-transform: uppercase;
-          border-bottom: 3px solid green;
+    .categorie--titre {
+      width: 40px;
+      font-size: 19px;
+      text-transform: uppercase;
+      border-bottom: 3px solid green;
+    }
+    .categorie--plats {
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      height: 110px;
+      background: #ffff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      cursor: pointer;
+
+      &:hover {
+        .categorie--prix_plats {
+          transition: 0.9s;
+          width: 23%;
         }
+        .categorie--texte_plats {
+          transition: 0.7s;
+          width: 60%;
+
+          p,
+          span {
+            transition: 0.5s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .categorie--valide {
+          transition: 0.9s;
+          transform: translateX(65px);
+        }
+
+        @include anim_icon;
+      }
+    }
+    .categorie--texte_plats {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+      padding: 1px 0px 20px 15px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+
+    .categorie--nom_plats {
+      font-family: $roboto;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .categorie--prix_plats {
+      font-size: 17px;
+      font-weight: bold;
+      display: flex;
+      gap: 10px;
+
+      p {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .categorie--valide {
+        width: 50%;
+        background-color: $tertiaire;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(80px);
+
+        i {
+          font-size: 25px;
+          color: #ffff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  /*  Menu  */
+
+  .container {
+    width: 100%;
+    margin-bottom: 210vh;
+
+    img {
+      width: 100%;
+      height: 250px;
+    }
+    .menu {
+      width: 355px;
+      top: 45%;
+      left: 0;
+      padding: 10px;
+
+      .menu--titre {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: space-around;
+
+        align-items: center;
+        h1 {
+          font-size: 30px;
+          font-family: $shrikhand;
+        }
+        .menu--icon-card {
+          position: relative;
+
+          i {
+            font-size: 28px;
+          }
+        }
+      }
+      .categorie {
+        width: 100%;
+
         .categorie--plats {
-          display: flex;
-          justify-content: space-between;
-          overflow: hidden;
           height: 70px;
-          background: #ffff;
-          border-radius: 10px;
-          margin-bottom: 20px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
           cursor: pointer;
 
           &:hover {
-            .categorie--prix_plats {
-              transition: 0.9s;
-              width: 23%;
-            }
-            .categorie--texte_plats {
-              transition: 0.7s;
-              width: 60%;
-
-              p,
-              span {
-                transition: 0.5s;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-              }
-            }
             .categorie--valide {
               transition: 0.9s;
               transform: translateX(0px);
             }
-
-            @include anim_icon;
           }
         }
         .categorie--texte_plats {
@@ -131,13 +226,22 @@
           flex-direction: column;
           gap: 10px;
           padding: 10px 0px 14px 5px;
+
+          span {
+            font-size: 15px;
+          }
         }
 
         .categorie--nom_plats {
-          font-family: $roboto;
+          margin: 0;
           font-size: 17px;
-          font-weight: bold;
         }
+
+        .categorie--details_plats {
+          width: 100%;
+          height: 35px;
+        }
+
         .categorie--prix_plats {
           font-size: 17px;
           font-weight: bold;
@@ -150,21 +254,19 @@
             flex-direction: column;
             justify-content: space-evenly;
           }
+        }
 
-          .categorie--valide {
-            width: 100%;
-            background-color: $tertiaire;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translateX(80px);
+        .categorie--valide {
+          width: 100%;
 
-            i {
-              font-size: 20px;
-              color: #ffff;
-            }
+          i {
+            font-size: 20px;
           }
         }
+      }
+
+      .button {
+        margin: 20% 25% 30%;
       }
     }
   }
