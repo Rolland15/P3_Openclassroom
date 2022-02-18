@@ -596,7 +596,7 @@ footer {
   }
   .restaurant {
     width: 97%;
-    padding: 0;
+    padding: 5px;
   }
   .restaurant .restaurant--titre {
     width: 86%;
@@ -724,11 +724,11 @@ footer {
   }
   /*  Menu  */
   .container {
-    width: 90%;
+    width: 100%;
     margin-bottom: 210vh;
   }
   .container img {
-    width: auto;
+    width: 100%;
     height: 250px;
   }
   .container .menu {
@@ -751,7 +751,7 @@ footer {
             align-items: center;
   }
   .container .menu .menu--titre h1 {
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Shrikhand";
   }
   .container .menu .menu--titre .menu--icon-card {
@@ -762,7 +762,6 @@ footer {
   }
   .container .menu .categorie {
     width: 100%;
-    margin: 48px auto;
   }
   .container .menu .categorie .categorie--nom_plats {
     margin: 0;
