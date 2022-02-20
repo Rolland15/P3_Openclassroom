@@ -1,8 +1,52 @@
 @import "../abstracts/mixins";
 @import "../abstracts/animation";
+
+@media screen and (max-width: 821px) {
+  .load_spinner .load_spinner--element {
+    width: 19%;
+    height: 13%;
+  }
+
+  .header {
+    width: 95%;
+  }
+
+  /*Accueil*/
+
+  .fonctionnement .fonctionnement--etapes {
+    height: 350px;
+    flex-direction: column;
+    align-items: center;
+
+    .etapes {
+      width: 50%;
+    }
+  }
+
+  .restaurant {
+    width: 96%;
+    height: 230vh;
+    margin-bottom: 0vh;
+    .restaurant--produits {
+      width: 100%;
+      grid-template-columns: 100%;
+      grid-template-rows: 30%;
+      padding: 0;
+    }
+  }
+
+  .restaurant--card a {
+    margin: 5px auto;
+  }
+}
+
 @media screen and (max-width: 376px) {
   /*Acceuil*/
 
+  .load_spinner .load_spinner--element {
+    width: 32%;
+    height: 18%;
+  }
   .header {
     width: 89%;
     gap: 19%;

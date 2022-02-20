@@ -336,8 +336,8 @@ body p {
 .container .categorie .categorie--plats:hover .categorie--valide {
   -webkit-transition: 0.9s;
   transition: 0.9s;
-  -webkit-transform: translateX(65px);
-          transform: translateX(65px);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .container .categorie .categorie--plats:hover i {
@@ -466,8 +466,52 @@ footer {
   color: white;
 }
 
+@media screen and (max-width: 821px) {
+  .load_spinner .load_spinner--element {
+    width: 19%;
+    height: 13%;
+  }
+  .header {
+    width: 95%;
+  }
+  /*Accueil*/
+  .fonctionnement .fonctionnement--etapes {
+    height: 350px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fonctionnement .fonctionnement--etapes .etapes {
+    width: 50%;
+  }
+  .restaurant {
+    width: 96%;
+    height: 230vh;
+    margin-bottom: 0vh;
+  }
+  .restaurant .restaurant--produits {
+    width: 100%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 30%;
+        grid-template-rows: 30%;
+    padding: 0;
+  }
+  .restaurant--card a {
+    margin: 5px auto;
+  }
+}
+
 @media screen and (max-width: 376px) {
   /*Acceuil*/
+  .load_spinner .load_spinner--element {
+    width: 32%;
+    height: 18%;
+  }
   .header {
     width: 89%;
     gap: 19%;
@@ -621,39 +665,6 @@ footer {
 }
 
 @media screen and (max-width: 821px) {
-  .header {
-    width: 95%;
-  }
-  /*Accueil*/
-  .fonctionnement .fonctionnement--etapes {
-    height: 350px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .fonctionnement .fonctionnement--etapes .etapes {
-    width: 50%;
-  }
-  .restaurant {
-    width: 96%;
-    height: 230vh;
-    margin-bottom: 0vh;
-  }
-  .restaurant .restaurant--produits {
-    width: 100%;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: 30%;
-        grid-template-rows: 30%;
-    padding: 0;
-  }
-  .restaurant--card a {
-    margin: 5px auto;
-  }
   .container {
     margin-bottom: 138vh;
   }
@@ -671,22 +682,6 @@ footer {
   }
   .container .button {
     margin: 12% 45% 5% 37%;
-  }
-  footer {
-    width: 820px;
-  }
-  footer .footer {
-    width: 100%;
-  }
-  footer .footer ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: 47px;
   }
 }
 
@@ -730,6 +725,10 @@ footer {
   }
   .container .menu .categorie {
     width: 100%;
+  }
+  .container .menu .categorie:hover {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   .container .menu .categorie .categorie--plats {
     height: 70px;
@@ -783,7 +782,7 @@ footer {
             justify-content: space-evenly;
   }
   .container .menu .categorie .categorie--valide {
-    width: 100%;
+    width: 50%;
   }
   .container .menu .categorie .categorie--valide i {
     font-size: 20px;

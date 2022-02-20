@@ -1,36 +1,4 @@
 @media screen and (max-width: 821px) {
-  .header {
-    width: 95%;
-  }
-
-  /*Accueil*/
-
-  .fonctionnement .fonctionnement--etapes {
-    height: 350px;
-    flex-direction: column;
-    align-items: center;
-
-    .etapes {
-      width: 50%;
-    }
-  }
-
-  .restaurant {
-    width: 96%;
-    height: 230vh;
-    margin-bottom: 0vh;
-    .restaurant--produits {
-      width: 100%;
-      grid-template-columns: 100%;
-      grid-template-rows: 30%;
-      padding: 0;
-    }
-  }
-
-  .restaurant--card a {
-    margin: 5px auto;
-  }
-
   .container {
     margin-bottom: 138vh;
     img {
@@ -50,20 +18,6 @@
 
     .button {
       margin: 12% 45% 5% 37%;
-    }
-  }
-
-  footer {
-    width: 820px;
-
-    .footer {
-      width: 100%;
-
-      ul {
-        flex-direction: column;
-        align-items: center;
-        margin-right: 47px;
-      }
     }
   }
 }

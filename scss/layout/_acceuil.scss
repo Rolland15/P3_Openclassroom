@@ -10,11 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include load;
 
   .load_spinner--element {
-    width: 18%;
-    height: 10%;
+    width: 8%;
+    height: 16%;
     border-radius: 50%;
     border: 5px solid white;
     position: relative;
@@ -49,6 +48,8 @@
       left: 36%;
     }
   }
+
+  @include load;
 }
 
 .position {
