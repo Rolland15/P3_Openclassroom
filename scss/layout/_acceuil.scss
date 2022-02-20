@@ -54,7 +54,8 @@
 
 .position {
   width: 100%;
-  background: rgb(231, 229, 229);
+  box-shadow: inset 0px 2px 2px 0px rgba(207, 207, 207, 255);
+  background-color: rgba(234, 234, 234, 255);
   display: flex;
   justify-content: center;
   font-family: $roboto;
