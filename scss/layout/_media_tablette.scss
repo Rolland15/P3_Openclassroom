@@ -15,9 +15,20 @@
     }
   }
 
-  .restaurant .restaurant--produits {
-    display: flex;
-    flex-direction: column;
+  .restaurant {
+    width: 96%;
+    height: 230vh;
+    margin-bottom: 0vh;
+    .restaurant--produits {
+      width: 100%;
+      grid-template-columns: 100%;
+      grid-template-rows: 30%;
+      padding: 0;
+    }
+  }
+
+  .restaurant--card a {
+    margin: 5px auto;
   }
 
   .container {

@@ -638,14 +638,21 @@ footer {
   .fonctionnement .fonctionnement--etapes .etapes {
     width: 50%;
   }
+  .restaurant {
+    width: 96%;
+    height: 230vh;
+    margin-bottom: 0vh;
+  }
   .restaurant .restaurant--produits {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 100%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 30%;
+        grid-template-rows: 30%;
+    padding: 0;
+  }
+  .restaurant--card a {
+    margin: 5px auto;
   }
   .container {
     margin-bottom: 138vh;
