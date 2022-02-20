@@ -515,9 +515,36 @@ footer {
   .header {
     width: 89%;
     gap: 19%;
+    height: 30px;
+  }
+  .header h1 {
+    margin: 0;
+  }
+  main .position p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: grey;
   }
   .presentation {
     text-align: center;
+  }
+  .presentation p {
+    width: 80%;
+  }
+  .presentation p:nth-child(2) {
+    width: 85%;
+    font-size: 18px;
+    color: gray;
+    font-weight: 300;
+  }
+  .presentation a {
+    font-weight: 400;
+  }
+  .presentation .presentation--titre {
+    margin-bottom: 0;
+  }
+  .fonctionnement {
+    margin-bottom: 30px;
   }
   .fonctionnement .fonctionnement--titre {
     width: 80%;
@@ -525,10 +552,12 @@ footer {
     text-align: start;
   }
   .fonctionnement .fonctionnement--etapes {
+    width: 90%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 10px auto;
   }
   .fonctionnement .fonctionnement--etapes .etapes {
     width: 90%;
@@ -536,7 +565,7 @@ footer {
   }
   .restaurant {
     width: 97%;
-    padding: 5px;
+    padding: 5px 5px 45px 5px;
   }
   .restaurant .restaurant--titre {
     width: 86%;
