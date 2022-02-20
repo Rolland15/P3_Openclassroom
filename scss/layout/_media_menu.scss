@@ -41,11 +41,8 @@
           height: 70px;
           cursor: pointer;
 
-          &:hover {
-            .categorie--valide {
-              transition: 0.9s;
-              transform: translateX(0px);
-            }
+          .categorie--valide {
+            width: 100%;
           }
         }
         .categorie--texte_plats {
