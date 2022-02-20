@@ -523,7 +523,6 @@ footer {
   main .position p {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    color: grey;
   }
   .presentation {
     text-align: center;
@@ -695,7 +694,7 @@ footer {
 
 @media screen and (max-width: 821px) {
   .container {
-    margin-bottom: 138vh;
+    margin-bottom: 149vh;
   }
   .container img {
     width: 100%;
@@ -718,7 +717,7 @@ footer {
   /*  Menu  */
   .container {
     width: 100%;
-    margin-bottom: 210vh;
+    margin-bottom: 200vh;
   }
   .container img {
     width: 100%;
@@ -743,6 +742,7 @@ footer {
             align-items: center;
   }
   .container .menu .menu--titre h1 {
+    font-weight: 400;
     font-size: 30px;
     font-family: "Shrikhand";
   }
@@ -756,8 +756,8 @@ footer {
     width: 100%;
   }
   .container .menu .categorie:hover {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(px);
+            transform: translateX(px);
   }
   .container .menu .categorie .categorie--plats {
     height: 70px;
