@@ -1,17 +1,93 @@
 @import "../abstracts/mixins";
+@import "../abstracts/animation";
+
+@media screen and (max-width: 821px) {
+  .load_spinner .load_spinner--element {
+    width: 19%;
+    height: 13%;
+  }
+
+  .header {
+    width: 95%;
+  }
+
+  /*Accueil*/
+
+  .fonctionnement .fonctionnement--etapes {
+    height: 350px;
+    flex-direction: column;
+    align-items: center;
+
+    .etapes {
+      width: 50%;
+    }
+  }
+
+  .restaurant {
+    width: 96%;
+    height: 230vh;
+    margin-bottom: 0vh;
+    .restaurant--produits {
+      width: 100%;
+      grid-template-columns: 100%;
+      grid-template-rows: 30%;
+      padding: 0;
+    }
+  }
+
+  .restaurant--card a {
+    margin: 5px auto;
+  }
+}
+
 @media screen and (max-width: 376px) {
   /*Acceuil*/
 
+  .load_spinner .load_spinner--element {
+    width: 32%;
+    height: 18%;
+  }
   .header {
     width: 89%;
     gap: 19%;
+    height: 30px;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  main .position {
+    p {
+      font-family: $roboto;
+      font-weight: 500;
+    }
   }
 
   .presentation {
     text-align: center;
+
+    p {
+      width: 80%;
+    }
+
+    p:nth-child(2) {
+      width: 85%;
+      font-size: 18px;
+      color: gray;
+      font-weight: 300;
+    }
+    a {
+      font-weight: 400;
+    }
+
+    .presentation--titre {
+      margin-bottom: 0;
+    }
   }
 
   .fonctionnement {
+    margin-bottom: 30px;
     .fonctionnement--titre {
       width: 80%;
       margin-left: 20px;
@@ -19,7 +95,9 @@
     }
 
     .fonctionnement--etapes {
+      width: 90%;
       flex-direction: column;
+      margin: 10px auto;
 
       .etapes {
         width: 90%;
@@ -30,8 +108,8 @@
 
   .restaurant {
     width: 97%;
-    padding: 0;
-
+    padding: 5px 5px 45px 5px;
+    height: 154vh;
     .restaurant--titre {
       width: 86%;
       text-align: start;
@@ -143,63 +221,6 @@
       align-items: flex-start;
       gap: 25px;
       padding: 0;
-    }
-  }
-
-  /*  Menu  */
-
-  .container {
-    width: 90%;
-    margin-bottom: 210vh;
-
-    img {
-      width: auto;
-      height: 250px;
-    }
-
-    .menu {
-      width: 95%;
-      top: 45%;
-      left: 0%;
-      padding: 10px;
-
-      .menu--titre {
-        width: 100%;
-        margin-left: 0;
-        display: flex;
-        justify-content: space-around;
-        padding: 10px;
-        align-items: center;
-        h1 {
-          font-size: 35px;
-          font-family: $shrikhand;
-        }
-        .menu--icon-card {
-          position: relative;
-
-          i {
-            font-size: 28px;
-          }
-        }
-      }
-
-      .categorie {
-        width: 100%;
-        margin: 48px auto;
-
-        .categorie--nom_plats {
-          margin: 0;
-        }
-
-        .categorie--details_plats {
-          width: 100%;
-          height: 35px;
-        }
-      }
-
-      .button {
-        margin: 20% 25% 30%;
-      }
     }
   }
 }

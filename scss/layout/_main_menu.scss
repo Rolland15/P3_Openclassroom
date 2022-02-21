@@ -10,23 +10,24 @@
   }
 
   .menu {
-    width: 80%;
+    width: 60%;
     border-radius: 30px 30px 0px 0px;
     position: absolute;
     padding: 50px;
     top: 70%;
-    left: 8%;
+    left: 17%;
     background-color: rgba(246, 246, 246, 255);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     .menu--titre {
       width: 75%;
-      margin-left: 25%;
+      margin-left: 12%;
+      margin-bottom: 70px;
       display: flex;
-      justify-content: space-around;
-      padding: 10px;
+      justify-content: space-between;
+
       align-items: center;
       h1 {
-        font-size: 35px;
+        font-size: 40px;
         font-family: $shrikhand;
       }
       .menu--icon-card {
@@ -56,91 +57,114 @@
       }
     }
 
-    .categorie {
-      width: 90%;
-      margin: 2px auto;
+    .categorie--details_plats {
+      //a suprimer html css
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 
-      .categorie--titre {
-        width: 40px;
-        font-size: 19px;
-        text-transform: uppercase;
-        border-bottom: 3px solid green;
-      }
-      .categorie--plats {
-        display: flex;
-        gap: 60px;
-        overflow: hidden;
-        height: 70px;
-        background: #ffff;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  .button {
+    margin: 5% 45% 5% 45%;
+    a {
+      width: 30%;
 
-        &:nth-child(1) {
-          animation: anim 0.2s ease;
-          @include anim_one;
+      text-decoration: none;
+      @include button;
+      padding: 15px 45px 15px 45px;
+      border-radius: 25px;
+    }
+  }
+
+  .categorie {
+    width: 70%;
+    margin: 2px auto;
+    @include anim_one;
+
+    .categorie--titre {
+      width: 40px;
+      font-size: 19px;
+      text-transform: uppercase;
+      border-bottom: 3px solid $tertiaire;
+    }
+    .categorie--plats {
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      height: 110px;
+      background: #ffff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      cursor: pointer;
+
+      &:hover {
+        .categorie--prix_plats {
+          transition: 0.9s;
+          width: 23%;
         }
-        &:nth-child(2) {
-          animation: anim 0.7s ease;
-          @include anim_one;
-        }
-        &:nth-child(3) {
-          animation: anim 0.7s ease;
-          @include anim_one;
-        }
-      }
-      .categorie--texte_plats {
-        display: flex;
-        width: 60%;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0px 14px 5px;
-      }
+        .categorie--texte_plats {
+          transition: 0.7s;
+          width: 60%;
 
-      .categorie--nom_plats {
-        font-family: $roboto;
-        font-size: 17px;
-        font-weight: bold;
-      }
-      .categorie--prix_plats {
-        width: 30%;
-        font-size: 17px;
-        font-weight: bold;
-        display: flex;
-        p {
-          padding-top: 20%;
-        }
-
-        .categorie--valide {
-          width: 100%;
-          background-color: $tertiaire;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          i {
-            font-size: 20px;
-            color: #ffff;
+          p,
+          span {
+            transition: 0.5s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
-      }
+        .categorie--valide {
+          transition: 0.9s;
+          transform: translateX(0px);
+        }
 
-      .categorie--details_plats {
-        //a suprimer html css
-        display: flex;
-        justify-content: space-between;
+        @include anim_icon;
       }
     }
-    .button {
-      margin: 5% 45% 5% 45%;
-      a {
-        width: 30%;
+    .categorie--texte_plats {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+      padding: 1px 0px 20px 15px;
 
-        text-decoration: none;
-        @include button;
-        padding: 15px 45px 15px 45px;
-        border-radius: 25px;
+      span {
+        font-size: 18px;
+      }
+    }
+
+    .categorie--nom_plats {
+      font-family: $roboto;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .categorie--prix_plats {
+      font-size: 17px;
+      font-weight: bold;
+      display: flex;
+      gap: 10px;
+
+      p {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .categorie--valide {
+        width: 50%;
+        background-color: $tertiaire;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(80px);
+
+        i {
+          font-size: 25px;
+          color: #ffff;
+        }
       }
     }
   }

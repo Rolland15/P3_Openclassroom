@@ -15,8 +15,6 @@ body p {
 .header {
   width: 100%;
   height: 60px;
-  -webkit-box-shadow: 1px 3px 5px 0px rgba(181, 179, 179, 0.75);
-          box-shadow: 1px 3px 5px 0px rgba(181, 179, 179, 0.75);
   padding: 20px;
 }
 
@@ -32,9 +30,150 @@ body p {
   font-weight: 400;
 }
 
+.load_spinner {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: opacity 10s ease;
+          animation: opacity 10s ease;
+}
+
+.load_spinner .load_spinner--element {
+  width: 8%;
+  height: 16%;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: relative;
+  opacity: 1.5;
+  z-index: 2000;
+}
+
+.load_spinner .load_spinner--element .load_spinner--element--ball-green {
+  width: 28%;
+  height: 28%;
+  border-radius: 50%;
+  background: #05cc9a;
+  position: absolute;
+  top: 4px;
+  left: -2px;
+}
+
+.load_spinner .load_spinner--element .load_spinner--element--ball-purple {
+  width: 28%;
+  height: 28%;
+  border-radius: 50%;
+  background: #680168;
+  position: absolute;
+  top: 5px;
+  right: -4px;
+}
+
+.load_spinner .load_spinner--element .load_spinner--element--ball-pink {
+  width: 28%;
+  height: 28%;
+  border-radius: 50%;
+  background: #fd7289;
+  position: absolute;
+  top: 87%;
+  left: 36%;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.load_spinner .load_spinner--element {
+  -webkit-animation: rotate 2s infinite;
+          animation: rotate 2s infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
 .position {
   width: 100%;
-  background: #e7e5e5;
+  -webkit-box-shadow: inset 0px 2px 2px 0px #cfcfcf;
+          box-shadow: inset 0px 2px 2px 0px #cfcfcf;
+  background-color: #eaeaea;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,14 +521,84 @@ footer {
   color: white;
 }
 
+@media screen and (max-width: 821px) {
+  .load_spinner .load_spinner--element {
+    width: 19%;
+    height: 13%;
+  }
+  .header {
+    width: 95%;
+  }
+  /*Accueil*/
+  .fonctionnement .fonctionnement--etapes {
+    height: 350px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fonctionnement .fonctionnement--etapes .etapes {
+    width: 50%;
+  }
+  .restaurant {
+    width: 96%;
+    height: 230vh;
+    margin-bottom: 0vh;
+  }
+  .restaurant .restaurant--produits {
+    width: 100%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 30%;
+        grid-template-rows: 30%;
+    padding: 0;
+  }
+  .restaurant--card a {
+    margin: 5px auto;
+  }
+}
+
 @media screen and (max-width: 376px) {
   /*Acceuil*/
+  .load_spinner .load_spinner--element {
+    width: 32%;
+    height: 18%;
+  }
   .header {
     width: 89%;
     gap: 19%;
+    height: 30px;
+  }
+  .header h1 {
+    margin: 0;
+  }
+  main .position p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
   }
   .presentation {
     text-align: center;
+  }
+  .presentation p {
+    width: 80%;
+  }
+  .presentation p:nth-child(2) {
+    width: 85%;
+    font-size: 18px;
+    color: gray;
+    font-weight: 300;
+  }
+  .presentation a {
+    font-weight: 400;
+  }
+  .presentation .presentation--titre {
+    margin-bottom: 0;
+  }
+  .fonctionnement {
+    margin-bottom: 30px;
   }
   .fonctionnement .fonctionnement--titre {
     width: 80%;
@@ -397,10 +606,12 @@ footer {
     text-align: start;
   }
   .fonctionnement .fonctionnement--etapes {
+    width: 90%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 10px auto;
   }
   .fonctionnement .fonctionnement--etapes .etapes {
     width: 90%;
@@ -408,7 +619,8 @@ footer {
   }
   .restaurant {
     width: 97%;
-    padding: 0;
+    padding: 5px 5px 45px 5px;
+    height: 154vh;
   }
   .restaurant .restaurant--titre {
     width: 86%;
@@ -534,19 +746,43 @@ footer {
     gap: 25px;
     padding: 0;
   }
-  /*  Menu  */
+}
+
+@media screen and (max-width: 821px) {
   .container {
-    width: 90%;
-    margin-bottom: 210vh;
+    margin-bottom: 149vh;
   }
   .container img {
-    width: auto;
+    width: 100%;
+    height: 400px;
+  }
+  .container .menu {
+    width: 87%;
+    top: 35%;
+    left: 3px;
+  }
+  .container .categorie {
+    width: 100%;
+  }
+  .container .button {
+    margin: 12% 45% 5% 37%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  /*  Menu  */
+  .container {
+    width: 100%;
+    margin-bottom: 180vh;
+  }
+  .container img {
+    width: 100%;
     height: 250px;
   }
   .container .menu {
-    width: 95%;
+    width: 355px;
     top: 45%;
-    left: 0%;
+    left: 0;
     padding: 10px;
   }
   .container .menu .menu--titre {
@@ -557,13 +793,14 @@ footer {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 10px;
+    margin-bottom: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .container .menu .menu--titre h1 {
-    font-size: 35px;
+    font-weight: 400;
+    font-size: 30px;
     font-family: "Shrikhand";
   }
   .container .menu .menu--titre .menu--icon-card {
@@ -574,14 +811,67 @@ footer {
   }
   .container .menu .categorie {
     width: 100%;
-    margin: 48px auto;
+  }
+  .container .menu .categorie:hover {
+    -webkit-transform: translateX(px);
+            transform: translateX(px);
+  }
+  .container .menu .categorie .categorie--plats {
+    height: 70px;
+    cursor: pointer;
+  }
+  .container .menu .categorie .categorie--plats .categorie--valide {
+    width: 100%;
+  }
+  .container .menu .categorie .categorie--texte_plats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px 14px 5px;
+  }
+  .container .menu .categorie .categorie--texte_plats span {
+    font-size: 15px;
   }
   .container .menu .categorie .categorie--nom_plats {
     margin: 0;
+    font-size: 17px;
   }
   .container .menu .categorie .categorie--details_plats {
     width: 100%;
     height: 35px;
+  }
+  .container .menu .categorie .categorie--prix_plats {
+    font-size: 17px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
+  .container .menu .categorie .categorie--prix_plats p {
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .container .menu .categorie .categorie--valide {
+    width: 50%;
+  }
+  .container .menu .categorie .categorie--valide i {
+    font-size: 20px;
   }
   .container .menu .button {
     margin: 20% 25% 30%;
