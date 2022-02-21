@@ -34,7 +34,7 @@
 }
 
 @mixin load {
-  animation: opacity 10s ease;
+  animation: opacity 3s ease;
   @keyframes opacity {
     0% {
       opacity: 0.5;
