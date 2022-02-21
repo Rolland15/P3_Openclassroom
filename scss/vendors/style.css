@@ -620,6 +620,7 @@ footer {
   .restaurant {
     width: 97%;
     padding: 5px 5px 45px 5px;
+    height: 154vh;
   }
   .restaurant .restaurant--titre {
     width: 86%;
@@ -749,7 +750,7 @@ footer {
 
 @media screen and (max-width: 821px) {
   .container {
-    margin-bottom: 138vh;
+    margin-bottom: 149vh;
   }
   .container img {
     width: 100%;
@@ -765,6 +766,115 @@ footer {
   }
   .container .button {
     margin: 12% 45% 5% 37%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  /*  Menu  */
+  .container {
+    width: 100%;
+    margin-bottom: 180vh;
+  }
+  .container img {
+    width: 100%;
+    height: 250px;
+  }
+  .container .menu {
+    width: 355px;
+    top: 45%;
+    left: 0;
+    padding: 10px;
+  }
+  .container .menu .menu--titre {
+    width: 100%;
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .menu .menu--titre h1 {
+    font-weight: 400;
+    font-size: 30px;
+    font-family: "Shrikhand";
+  }
+  .container .menu .menu--titre .menu--icon-card {
+    position: relative;
+  }
+  .container .menu .menu--titre .menu--icon-card i {
+    font-size: 28px;
+  }
+  .container .menu .categorie {
+    width: 100%;
+  }
+  .container .menu .categorie:hover {
+    -webkit-transform: translateX(px);
+            transform: translateX(px);
+  }
+  .container .menu .categorie .categorie--plats {
+    height: 70px;
+    cursor: pointer;
+  }
+  .container .menu .categorie .categorie--plats .categorie--valide {
+    width: 100%;
+  }
+  .container .menu .categorie .categorie--texte_plats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px 14px 5px;
+  }
+  .container .menu .categorie .categorie--texte_plats span {
+    font-size: 15px;
+  }
+  .container .menu .categorie .categorie--nom_plats {
+    margin: 0;
+    font-size: 17px;
+  }
+  .container .menu .categorie .categorie--details_plats {
+    width: 100%;
+    height: 35px;
+  }
+  .container .menu .categorie .categorie--prix_plats {
+    font-size: 17px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
+  .container .menu .categorie .categorie--prix_plats p {
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .container .menu .categorie .categorie--valide {
+    width: 50%;
+  }
+  .container .menu .categorie .categorie--valide i {
+    font-size: 20px;
+  }
+  .container .menu .button {
+    margin: 20% 25% 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */

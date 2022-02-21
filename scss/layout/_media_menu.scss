@@ -27,7 +27,7 @@
 
   .container {
     width: 100%;
-    margin-bottom: 200vh;
+    margin-bottom: 180vh;
 
     img {
       width: 100%;
@@ -44,6 +44,7 @@
         margin-left: 0;
         display: flex;
         justify-content: space-around;
+        margin-bottom: 0;
 
         align-items: center;
         h1 {
