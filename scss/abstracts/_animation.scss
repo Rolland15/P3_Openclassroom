@@ -37,18 +37,21 @@
   animation: opacity 3s ease;
   @keyframes opacity {
     0% {
+      z-index: 5;
       opacity: 0.5;
     }
     50% {
+      z-index: 5;
       opacity: 0.2;
     }
 
     100% {
+      z-index: 5;
       opacity: 0;
     }
   }
   .load_spinner--element {
-    animation: rotate 2s infinite;
+    animation: rotate 4s ease;
 
     @keyframes rotate {
       0% {
@@ -67,6 +70,7 @@
       }
       100% {
         transform: rotate(720deg);
+        z-index: -100;
       }
     }
   }
