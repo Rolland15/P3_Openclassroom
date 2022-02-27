@@ -114,11 +114,12 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-family: $roboto;
           }
         }
         .categorie--valide {
           transition: 0.9s;
-          transform: translateX(0px);
+          transform: translateX(53px);
         }
 
         @include anim_icon;

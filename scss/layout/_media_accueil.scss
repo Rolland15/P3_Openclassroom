@@ -1,6 +1,28 @@
 @import "../abstracts/mixins";
 @import "../abstracts/animation";
 
+@media screen and (max-width: 1300px) {
+  .restaurant .restaurant--produits {
+    row-gap: 10%;
+  }
+
+  .restaurant--card a .description-card .texte-card .titre-card {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .fonctionnement .fonctionnement--etapes {
+    height: 350px;
+    flex-direction: column;
+    align-items: center;
+
+    .etapes {
+      width: 50%;
+    }
+  }
+}
+
 @media screen and (max-width: 821px) {
   .load_spinner .load_spinner--element {
     width: 19%;
@@ -32,6 +54,7 @@
       grid-template-columns: 100%;
       grid-template-rows: 30%;
       padding: 0;
+      row-gap: 2%;
     }
   }
 
