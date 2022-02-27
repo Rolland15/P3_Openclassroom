@@ -528,6 +528,31 @@ footer {
   color: white;
 }
 
+@media screen and (max-width: 1300px) {
+  .restaurant .restaurant--produits {
+    row-gap: 10%;
+  }
+  .restaurant--card a .description-card .texte-card .titre-card {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .fonctionnement .fonctionnement--etapes {
+    height: 350px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fonctionnement .fonctionnement--etapes .etapes {
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 821px) {
   .load_spinner .load_spinner--element {
     width: 19%;
@@ -562,6 +587,7 @@ footer {
     -ms-grid-rows: 30%;
         grid-template-rows: 30%;
     padding: 0;
+    row-gap: 2%;
   }
   .restaurant--card a {
     margin: 5px auto;
